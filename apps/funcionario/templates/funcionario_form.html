@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Funcionario</title>
+</head>
+<body>
+
+    <h2>Formula para criar funcionario</h2>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Criar</button>
+    </form>
+
+    {% if funcionario %}
+        <a href="{% url 'delete_funcionario' funcionario.id %}">Excluir funcionario</a>
+    {% endif %}
+
+</body>
+</html>

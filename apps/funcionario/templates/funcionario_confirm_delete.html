@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar funcionario</title>
+</head>
+<body>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Tem certeza que ira excluior o funcionario {{ funcionario.nome }}.</h3>
+        <button type="submit">Confirmar exclusão</button>
+    </form>
+
+</body>
+</html>

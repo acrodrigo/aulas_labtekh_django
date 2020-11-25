@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Funcionarios</title>
+</head>
+<body>
+
+    <ul>
+    {% for f in funcionario %}
+        <a href="{% url 'update_funcionario' f.id %}">
+            <li>{{ f }}</li>
+        </a> <a href="{% url 'listar_ponto' f.id %}">Verificar ponto</a>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_funcionario' %}">Criar usuario</a>
+
+</body>
+</html>
