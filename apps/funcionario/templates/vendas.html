@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de vendas</title>
+</head>
+<body>
+
+    <ul>
+    {% for v in vendas %}
+        <li>{{ v.numero }}</li>
+        <li>{{ v.data }}</li>
+        <li>{{ v.valor }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

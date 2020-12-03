@@ -10,7 +10,7 @@
     {% for f in funcionario %}
         <a href="{% url 'update_funcionario' f.id %}">
             <li>{{ f }}</li>
-        </a> <a href="{% url 'listar_ponto' f.id %}">Verificar ponto</a>
+            <li><a href="{% url 'vendas_funcionario' f.id %}">Visualizar Vendas</a></li>
     {% endfor %}
     </ul>
 

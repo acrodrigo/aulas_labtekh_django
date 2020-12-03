@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.funcionario',
-    'apps.registro_ponto',
 ]
 
 MIDDLEWARE = [

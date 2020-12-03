@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Funcionario
+from .models import Funcionario, Venda
 from .forms import FuncionarioForm
 
 
@@ -43,3 +43,11 @@ def deletar_usuario(request, id):
         return redirect('list_funcionario')
 
     return render(request, 'funcionario_confirm_delete.html', {'funcionario': funcionario})
+
+
+def vendas(request, id):
+    vendas = Venda.objects.filter(vendedor__id__contains=id)
+    print('Vendas ', vendas)
+    return render(request, 'vendas.html', {
+        'vendas': vendas
+    })
